@@ -1,0 +1,18 @@
+ Basically, I was tired of writing code like this:
+
+ $('.some_class').each(function() {
+   var x = $(this).text();
+   $(this).text(x.replace('ello', 'hello');
+ );
+ 
+ So, instead, you can write that:
+
+ $('.some_class').alter('text', function(text) {
+    return text.replace('ello', 'hello');
+ });
+ 
+ Meaning: for all '.some_class', you want to *alter* the .text() method by replacing every occurences of ello by hello.
+
+
+
+
